@@ -28,4 +28,21 @@ async function searchImage(){
     if (page === 1) {
         searchResults.innerHTML = ""
     }
+    // itterate through the results and create elements for each image
+    results.map((results) =>{
+        const imageWrapper = document.createElement('div')
+        imageWrapper.classList.add("search-result")
+        const image = document.createElement('img')
+        image.src = results.urls.small
+        image.alt = results.alt_description
+        const imageLink = document.createElement('a')
+        imageLink.href = results.links.html
+        imageLink.target = "_blank"
+        imageLink.textContent = results.alt_description
+
+        imageWrapper.appendChild(image);
+        imageWrapper.appendChild(imageLink);
+
+
+    });
 }
