@@ -42,8 +42,14 @@ async function searchImage(){
 
         imageWrapper.appendChild(image);
         imageWrapper.appendChild(imageLink);
-
+        
         imageWrapper.appendChild(imageWrapper); // apend the image wrapper to the search results
 
     });
+    //incremet of page number
+    page++ 
+    //display the "show more" button if the page number is greater than 1
+    if(page > 1){
+       showMore.style.display = "block" 
+    }
 }
