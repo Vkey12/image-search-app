@@ -23,4 +23,9 @@ async function searchImage(){
 
     //extaction of results array from JSON data
     const results = data.results
+
+    //clear search results if it's the first page
+    if (page === 1) {
+        searchResults.innerHTML = ""
+    }
 }
