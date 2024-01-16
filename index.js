@@ -20,4 +20,7 @@ async function searchImage(){
     //sending a request to the api and waits for response 
     const response = await fetch (url)
     const data = await response.json()
+
+    //extaction of results array from JSON data
+    const results = data.results
 }
